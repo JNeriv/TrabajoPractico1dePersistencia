@@ -19,10 +19,14 @@ public class Rubro {
 
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     @JoinColumn(name = "Rubro_id")
-    private List<Producto> productos = new ArrayList<>();
+    private List<Producto> productos = new ArrayList<Producto>();
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    public void addProducto(Producto produ){
+        productos.add(produ);
+    }
 
     }

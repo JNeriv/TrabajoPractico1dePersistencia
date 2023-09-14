@@ -36,6 +36,13 @@ public class Cliente {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    public void addDomicilio(Domicilio domi){
+        domicilios.add(domi);
+    }
+    public void addPedido(Pedido pedi){
+        pedidos.add(pedi);
+    }
+
 
 }
 

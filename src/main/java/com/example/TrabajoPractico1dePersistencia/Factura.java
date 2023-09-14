@@ -6,7 +6,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.Date;
+import java.time.LocalDate;
 @Entity
 @Data
 @NoArgsConstructor
@@ -16,7 +16,7 @@ import java.util.Date;
 
 public class Factura {
     private int numero;
-    private Date fecha;
+    private LocalDate fecha;
     private double descuento;
     private String formaPago;
     private int total;
